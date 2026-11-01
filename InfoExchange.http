@@ -1,0 +1,21 @@
+@InfoExchange_HostAddress = http://localhost:5160
+
+### Requests reference letter for patient 12345.
+GET {{InfoExchange_HostAddress}}/12345/referenceletter
+
+### Requests reference letter for patient 54321.
+GET {{InfoExchange_HostAddress}}/54321/referenceletter
+
+### Requests reference letter for patient 67890.
+### This request should fail; The file does not exist.
+GET {{InfoExchange_HostAddress}}/67890/referenceletter
+
+### Requests allergies information file for patient 12345.
+GET {{InfoExchange_HostAddress}}/12345/allergies
+
+### Requests medication usage file for patient 54321.
+GET {{InfoExchange_HostAddress}}/54321/meds
+
+### Requests allergies information file for patient 54321.
+### This request should fail; The file does not exist.
+GET {{InfoExchange_HostAddress}}/54321/allergies
